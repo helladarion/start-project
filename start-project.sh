@@ -77,14 +77,23 @@ EOF
 version: "3.7"
 services:
   web:
-    build: app
+    build: ${code_dir}
     ports:
       - 80:9000
     volumes:
       - ./${code_dir}:/app
 EOF
 fi
-
+echo "Project ${project_name} created"
+cat >${code_dir}/created.json<<EOF
+{
+    "project_name": "${project_name}",
+    "directory": "${code_dir}"
+    "created": "$(date)"
+    "git-repo": "github.com/new"
+}
+EOF
+cat ${code_dir}/created.json
 
 
 
