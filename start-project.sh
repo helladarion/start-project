@@ -21,6 +21,8 @@ set_variable()
 #########################
 # Main Script starts here
 
+#TEst
+
 unset project_name
 
 base_folder="/mnt/storage/study/projects"
