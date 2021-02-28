@@ -23,7 +23,7 @@ set_variable()
 
 unset project_name
 
-base_folder="$HOME/Documents/personal/projects"
+base_folder="/mnt/storage/study/projects"
 code_dir="app"
 
 while getopts 'p:?h' c
